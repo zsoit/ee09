@@ -1,24 +1,15 @@
-# PHP - PODSTAWY
+# ✅ PHP - PODSTAWY
 
 ```php
-    $zmienna = "kropka służy do łączenia łańćuchów znaków";
+    $zmienna = "kropka służy do łączenia, zamiast plusa";
     echo("Echo służy do wyświetlania" . $zmienna);
 
     STALA_WARTOSC = 12.5;
     print("Print też służy do wyświetlania, np stałej liczbowej " . STALA_WARTOSC );
 
-    if($zmienna==0)
-    {
-        echo("Jest to instrukcja warunkowa is");
-    }
-    else
-    {
-        echo("Jest to instrukcja warunkowa else");
-    }
-
 ```
 
-# PHP - PĘTLE
+# ✅ PHP - PĘTLE
 
 WP- Warunek Początkowy
 \
@@ -52,9 +43,51 @@ do
     $i++; //WM
 }
 while($i<10); //WS
+
+
 ```
 
-## INSTRUKCJA SWITCH-CASE
+# ✅ INSTRUKCJA WARUNKOWA
+
+## IF, ELSE
+```PHP
+    // instrukcja if
+    if($zmienna==0)
+    {
+        echo("Jest to instrukcja warunkowa is");
+    }
+
+    //instrukcja if złożona
+    if($zmienna==0)
+    {
+        echo("Jest to instrukcja is");
+    }
+    else
+    {
+        echo("Jest to else");
+    }
+
+    //instrukcja if złożona - kilka elemntów
+
+    if($zmienna==0){
+        echo("Jest to 0");
+    }
+    elseif($zmienna==2){
+        echo("Jest to 2");
+
+    }
+    elseif($zmienna==5){
+        echo("Jest to 5");
+
+    }
+    else{
+        echo("Jest to else");
+    }
+
+```
+
+
+## SWITCH CASE
 JEŚLI $zmienna==0 WYBIERZ CASE 1: itp
 ```php
 switch($zmienna)

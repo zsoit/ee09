@@ -1,7 +1,6 @@
 
 # PHP&MYSQL -  EE09
 
-
 ## ✅ Połączenie z bazą
 OBIEKTOWO
 ```php
@@ -50,8 +49,6 @@ if($conn->connect_errno){
 $imie = "Adama";
 $nazwisko = "Mickiewicz";
 ```
-
-
 ### OBIEKTOWO:
 
 ```php
@@ -91,7 +88,7 @@ $res = $mysqli_query($conn, $sql);
 OBIEKTOWO: \
 (pętla foreach działa tak samo jak pętla while z feych_assoc)
 ```php
-// TABLICA ASOCJACYJNA
+// TABLICA ASOCJACYJNA, PO NAZWIE
 foreach($res as $row){
     echo "<p>{$row['Imie']}</p>";
     echo "<p>{$row['Nazwisko']}</p>";
@@ -111,6 +108,8 @@ while($row = $res->fetch_row()){
     echo "<p>{$row[2]}</p>";
 }
 
+echo " <h1>Liczba zwróconych wierszy: {$res->num_rows}</h1>";
+echo " <h1>Liczba zwróconych kolumn: {$res->num_fileds}</h1>";
 ```
 
 PROCEDURALNIE:
@@ -129,7 +128,11 @@ while($row = mysqli_fetch_row($res)){
     echo "<p>{$row[1]}</p>";
     echo "<p>{$row[2]}</p>";
 }
+
+echo " <h1>Liczba zwróconych wierszy: " . mysqli_num_rows($res) . "</h1>";
+echo " <h1>Liczba zwróconych kolumn: " . mysqli_num_fileds($res) . "</h1>";
 ```
+
 
 
 
@@ -146,14 +149,6 @@ PROCEDURALNIE:
 mysqli_close($conn);
 ```
 
-
-
-## ✅ Inne funckje
-
-```php
-echo " <h1>Liczba zwróconych wierszy: {$res->num_rows}</h1>"; //mysqli_num_rows($res)
-echo " <h1>Liczba zwróconych kolumn: {$res->num_fileds}</h1>"; //mysqli_num_fileds($res)
-```
 
 \
 Przyklad pliku polaczenie_obiektowe.php:
@@ -184,12 +179,7 @@ $conn->close();
 Przyklad pliku polaczenie_proceduralne.php:
 ```php
 
-$conn = mysqli_connect(
-    "localhost",
-    'root',
-    '',
-    'szkola'
-);
+$conn = mysqli_connect("localhost",'root','','szkola');
 
 $imie = "Adama";
 $nazwisko = "Mickiewicz";
@@ -204,5 +194,5 @@ while($row = mysqli_fetch_assoc($res)){
 }
 
 
-$conn->close();
+mysqli_close($conn);
 ```
