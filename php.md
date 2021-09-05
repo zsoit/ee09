@@ -1,6 +1,12 @@
 # ✅ PHP - PODSTAWY
 
 ```php
+/* METODY UMIESZCZANIA PHP
+    1) <?php ?> (TEGO DZIŚ UŻYWAMY)
+    2) <% %>
+    3) <script lang="php"></script>
+*/
+
     $zmienna = "kropka służy do łączenia, zamiast plusa";
     echo("Echo służy do wyświetlania" . $zmienna);
 
