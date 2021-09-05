@@ -3,7 +3,7 @@
 
 
 ## ✅ Połączenie z bazą
-Wersja 1 - OOP
+OBIEKTOWO
 ```php
 $conn = new mysqli(
     "localhost",
@@ -12,7 +12,7 @@ $conn = new mysqli(
     'szkola'
 );
 ```
-Wersja 2 - PROCEDURALNIE
+PROCEDURALNIE
 ```php
 $conn = mysqli_connect(
     "localhost",
@@ -24,6 +24,13 @@ $conn = mysqli_connect(
 
 ### Sprawdzenie połącznia (opcjonalnie)
 ```php
+$conn = @new mysqli(
+    "localhost",
+    'root',
+    '',
+    'szkola'
+);
+
 if($conn->connect_errno){
     echo "Nie połączono z bazą danych <br />
     Opis:  {$conn->connect_error} <br />
@@ -39,6 +46,7 @@ if($conn->connect_errno){
 
 
 ```php
+// Zmienne, które przchowują przykładowe dane
 $imie = "Adama";
 $nazwisko = "Mickiewicz";
 ```
@@ -56,6 +64,15 @@ $sql = "SELECT Imie, Nazwisko, Ksiazka FROM biblioteka WHERE Imie = ? AND nazwis
 $query = $conn->prepare($sql);
 $query->bind_param('ss', $imie, $nazwisko);
 $query->execute();
+
+/*
+type:
+u - decimal
+s - stinrg
+i - int
+d - double
+b - blob
+*/
 ```
 
 ### PROCEDURALNIE:
@@ -117,12 +134,75 @@ while($row = mysqli_fetch_row($res)){
 
 
 ## ✅ Zamknięcie połącznia
-Wersja 1 - OOP
+
+
+OBIEKTOWO:
 ```php
 $conn->close();
 ```
 
-Wersja 2 - PROCEDURALNIE
+PROCEDURALNIE:
 ```php
-$mysqli_close($conn);
+mysqli_close($conn);
+```
+
+
+
+## ✅ Inne funckje
+
+```php
+echo " <h1>Liczba zwróconych wierszy: {$res->num_rows}</h1>"; //mysqli_num_rows($res)
+echo " <h1>Liczba zwróconych kolumn: {$res->num_fileds}</h1>"; //mysqli_num_fileds($res)
+```
+
+\
+Przyklad pliku polaczenie_obiektowe.php:
+```php
+
+$conn = new mysqli(
+    "localhost",
+    'root',
+    '',
+    'szkola'
+);
+
+$imie = "Adama";
+$nazwisko = "Mickiewicz";
+
+$sql = "SELECT Imie, Nazwisko, Ksiazka FROM biblioteka WHERE Imie='{$imie}' AND Nazwisko='{$nazwisko}'";
+$res = $conn->query($sql);
+
+foreach($res as $row){
+    echo "<p>{$row['Imie']}</p>";
+    echo "<p>{$row['Nazwisko']}</p>";
+    echo "<p>{$row['Ksiazka']}</p>";
+}
+
+$conn->close();
+```
+
+Przyklad pliku polaczenie_proceduralne.php:
+```php
+
+$conn = mysqli_connect(
+    "localhost",
+    'root',
+    '',
+    'szkola'
+);
+
+$imie = "Adama";
+$nazwisko = "Mickiewicz";
+
+$sql = "SELECT Imie, Nazwisko, Ksiazka FROM biblioteka WHERE Imie='{$imie}' AND Nazwisko='{$nazwisko}'";
+$res = mysqli_query($conn, $sql);
+
+while($row = mysqli_fetch_assoc($res)){
+    echo "<p>{$row['Imie']}</p>";
+    echo "<p>{$row['Nazwisko']}</p>";
+    echo "<p>{$row['Ksiazka']}</p>";
+}
+
+
+$conn->close();
 ```

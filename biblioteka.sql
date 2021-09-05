@@ -1,4 +1,5 @@
-DROP TABLE biblioteka;
+CREATE database szkola;
+use szkola;
 CREATE TABLE biblioteka(
     id int PRIMARY KEY UNIQUE AUTO_INCREMENT,
     Imie varchar(20) NOT NULL,
