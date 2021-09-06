@@ -49,7 +49,7 @@ if($conn->connect_errno){
 $imie = "Adama";
 $nazwisko = "Mickiewicz";
 ```
-### OBIEKTOWO:
+OBIEKTOWO:
 
 ```php
 #METODA 1
@@ -61,6 +61,7 @@ $sql = "SELECT Imie, Nazwisko, Ksiazka FROM biblioteka WHERE Imie = ? AND nazwis
 $query = $conn->prepare($sql);
 $query->bind_param('ss', $imie, $nazwisko);
 $query->execute();
+$res = $query->get_result();
 
 /*
 type:
@@ -72,7 +73,7 @@ b - blob
 */
 ```
 
-### PROCEDURALNIE:
+PROCEDURALNIE:
 
 ```php
 #METODA 1
@@ -90,22 +91,28 @@ OBIEKTOWO: \
 ```php
 // TABLICA ASOCJACYJNA, PO NAZWIE
 foreach($res as $row){
-    echo "<p>{$row['Imie']}</p>";
-    echo "<p>{$row['Nazwisko']}</p>";
-    echo "<p>{$row['Ksiazka']}</p>";
+    echo "
+    <p>{$row['Imie']}</p>
+    <p>{$row['Nazwisko']}</p>
+    <p>{$row['Ksiazka']}</p>
+    ";
 }
 
 while($row = $res->fetch_assoc()){
-    echo "<p>{$row['Imie']}</p>";
-    echo "<p>{$row['Nazwisko']}</p>";
-    echo "<p>{$row['Ksiazka']}</p>";
+    echo "
+    <p>{$row['Imie']}</p>
+    <p>{$row['Nazwisko']}</p>
+    <p>{$row['Ksiazka']}</p>
+    ";
 }
 
 //TABLICA NUMERYCZNA, PO INDEXIE
 while($row = $res->fetch_row()){
-    echo "<p>{$row[0]}</p>";
-    echo "<p>{$row[1]}</p>";
-    echo "<p>{$row[2]}</p>";
+    echo "
+    <p>{$row[0]}</p>
+    <p>{$row[1]}</p>
+    <p>{$row[2]}</p>
+    ";
 }
 
 echo " <h1>Liczba zwróconych wierszy: {$res->num_rows}</h1>";
@@ -115,18 +122,22 @@ echo " <h1>Liczba zwróconych kolumn: {$res->num_fileds}</h1>";
 PROCEDURALNIE:
 
 ```php
-// TABLICA ASOCJACYJNA
+// TABLICA ASOCJACYJNA, PO NAZWIE
 while($row = mysqli_fetch_assoc($res)){
-    echo "<p>{$row['Imie']}</p>";
-    echo "<p>{$row['Nazwisko']}</p>";
-    echo "<p>{$row['Ksiazka']}</p>";
+    echo "
+    <p>{$row['Imie']}</p>
+    <p>{$row['Nazwisko']}</p>
+    <p>{$row['Ksiazka']}</p>
+    ";
 }
 
 //TABLICA NUMERYCZNA, PO INDEXIE
 while($row = mysqli_fetch_row($res)){
-    echo "<p>{$row[0]}</p>";
-    echo "<p>{$row[1]}</p>";
-    echo "<p>{$row[2]}</p>";
+    echo "
+    <p>{$row[0]}</p>
+    <p>{$row[1]}</p>
+    <p>{$row[2]}</p>
+    ";
 }
 
 echo " <h1>Liczba zwróconych wierszy: " . mysqli_num_rows($res) . "</h1>";
@@ -168,9 +179,11 @@ $sql = "SELECT Imie, Nazwisko, Ksiazka FROM biblioteka WHERE Imie='{$imie}' AND 
 $res = $conn->query($sql);
 
 foreach($res as $row){
-    echo "<p>{$row['Imie']}</p>";
-    echo "<p>{$row['Nazwisko']}</p>";
-    echo "<p>{$row['Ksiazka']}</p>";
+    echo "
+    <p>{$row['Imie']}</p>
+    <p>{$row['Nazwisko']}</p>
+    <p>{$row['Ksiazka']}</p>
+    ";
 }
 
 $conn->close();
@@ -188,9 +201,11 @@ $sql = "SELECT Imie, Nazwisko, Ksiazka FROM biblioteka WHERE Imie='{$imie}' AND 
 $res = mysqli_query($conn, $sql);
 
 while($row = mysqli_fetch_assoc($res)){
-    echo "<p>{$row['Imie']}</p>";
-    echo "<p>{$row['Nazwisko']}</p>";
-    echo "<p>{$row['Ksiazka']}</p>";
+    echo "
+    <p>{$row['Imie']}</p>
+    <p>{$row['Nazwisko']}</p>
+    <p>{$row['Ksiazka']}</p>
+    ";
 }
 
 
