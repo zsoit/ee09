@@ -24,6 +24,7 @@ text-transform:
         lowercase;
         none;
 
+box-sizing: content-box | border-box | padding-box
 background-color:  red;
 color: red;
 font-family: Arial;
