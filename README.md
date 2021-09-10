@@ -11,10 +11,11 @@
 - [MS Acess](notatki/db/access.md)
 
 -----
-## Arkusze - rowiązania
+## Arkusze
 
-- 2021 STYCZEN ARKUSZ 03
-- 2021 STYCZEŃ ARKUSZ 02
-- 2020 STYCZEŃ ARKUSZ 01
+- [2020 STYCZEŃ ARKUSZ 01](https://arkusze.pl/zawodowy/ee09-2021-styczen-egzamin-zawodowy-praktyczny.pdf)
+-- [zasady oceniania](https://arkusze.pl/zawodowy/ee09-2021-styczen-egzamin-zawodowy-praktyczny-zasady-oceniania.pdf)
+- [2021 STYCZEN ARKUSZ 02](https://egzamin-ee09.blogspot.com/2021/05/arkusz-ee09-02-2101-sg.html)
+- [2021 STYCZEŃ ARKUSZ 03](https://egzamin-ee09.blogspot.com/2021/05/arkusz-ee09-03-2101-sg.html)
 
 
