@@ -1,0 +1,15 @@
+select zespol1, zespol2, wynik, data_rogrywki from rozgrywka where zespol1='EVG'
+select imie, nazwisko from zawodnik pozycja_id=3
+select pozycja_id, nazwisko 
+from zawodnik 
+join pozycja_id
+on
+zawoddnik.pozycja_id = pozycja.id 
+where
+pozycja_id = 1 
+and 
+pozycja_id = 2
+and 
+pozycyja_id = 3
+drop table liga;
+
