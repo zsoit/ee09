@@ -1,5 +1,25 @@
+# ✅ EGZAMIN 
 
+### Tworzenie użytkownika
+```SQL
+CREATE USER 'fryzjer'@'localhost'
+IDENTIFIED BY 'Fryz12'
+;
+```
 
+### Nadwanie uprawnień
+```sql
+GRANT CREATE, ALTER, SELECT
+ON egzamin.liga
+TO 'fryzjer'@'localhost'
+;
+```
+
+### Wyczyszczenie tabeli z danych
+```sql
+TRUNCATE TABLE rozgrywka
+;
+```
 
 # ✅KLAUZULE
 
