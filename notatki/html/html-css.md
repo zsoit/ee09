@@ -39,6 +39,11 @@ color: red;
 font-family: Arial;
 font-size: 12px;
 
+border-radius: 20px;
+border: 2px solid black;
+            -dotted /*kropkowana*/
+            
+
 padding: 10px;
 margin: 20px;
 border: 3px solid black;
@@ -54,6 +59,7 @@ clear: both;
 /* #flex */
 display: flex;
 flex-wrap: wrap;
+justify-content: center;
 flex: 30%;
 
 /* /box-sizing: content-box | border-box | padding-box */

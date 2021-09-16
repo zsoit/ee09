@@ -6,6 +6,7 @@ $_POST[] //niewidoczne
 $_GET[] //widoczne w paskku adresu ?strona=kontakt 
 isset() //sprawdza czy zmienna ma ustawiona wartosc
 empty() //sprawdza czy zmienna jest pusta
+date('Y-m-d') //zwraca dane w podanym formacie 
 
 // PLIKI COOKIES/CIASTECZKA
 $_COOKIES[]
