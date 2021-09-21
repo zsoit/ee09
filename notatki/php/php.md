@@ -49,7 +49,7 @@ $i-- postdekrementacja zwraca zmienna a nastepnie zmiejsza ja o 1
 // PORÓWANIANIA
 == - równe
 <= - mniejsze równe
->= - więskze równe
+>= - większe równe
 < - mniejsze
 > - większe
 
@@ -163,3 +163,50 @@ switch($zmienna)
 }
 ```
 
+#  ✅ TABLICE 
+
+- jest to zmienna strukturalna
+- zmienna przechowująca zbiór określnonych wartośći i elementów
+- do każdej z wartości można się odwołać po indexie
+- INDEXY numerowane są od zera
+- wobec miej obowiązuja te same reguły co do zmiennych prostych 
+
+```php
+//pierwszy sposób deklaracji tablicy
+$nazwa_tablivy =array(element, element2);
+
+// inny sposób
+$nazwa_tablicy[0]=element1;
+$nazwa_tablicy[1]=element2;
+
+
+// metody
+rand(1, 49) //zwraca losowa liczbe z przedzialu dwoch liczb
+sort($nazwa_tablicy) //sortowanie rosnące
+rsort($nazwa_tablicy //sortowanie malejące
+```
+
+### Przykład 1.
+```php
+
+$Lista = array("Mleko","Chleb","Pasztet","Śledź");
+
+echo "<h1>Lista zakupów: </h1>";
+
+// petla_for_klasyczna
+for($i=0; $i<=3; $i++)
+{
+    echo $Lista[$i] . "<br>";
+}
+
+//petla_foreach_wszystkie_elementy
+foreach($Lista as $produkt)
+{
+    echo $produkt . "<br>";
+}
+
+
+
+
+
+```
