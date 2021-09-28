@@ -25,18 +25,17 @@ TRUNCATE TABLE rozgrywka
 
 
 
-# ✅KLAUZULE
+# ✅KLAUZULE WHERE
 
 ```SQL
-• LIKE --nazwisko like '%a' or nazwisko like 'a%';
 
 • ORDER BY
-- ASC (ascending) rosnąco.
-- DESC (descending) malejąco
+  -> ASC (ascending) rosnąco.
+  -> DESC (descending) malejąco
 
-• HAVING --filtrowanie grup count(id_prac);
+• HAVING --filtrowanie dla f.agregujacych
 
-• GROUP BY -- limit 10 ; na samym koncu;
+• GROUP BY -- grupowanie;
 
 • LIMIT -- limit 10 ; na samym koncu;
 ```
