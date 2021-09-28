@@ -2,7 +2,7 @@
 
 ## ✅ [PHP](notatki/php/php.md) 
 - [Połączenie z bazą danych](notatki/php/conn.md)
-- [Metody http /formularze](notatki/php/http.md)
+- [Formularze](notatki/php/http.md)
 
 ## ✅ [HTML/CSS](notatki/html/html-css.md)
 - [JavaScript](notatki/html/js.md)
