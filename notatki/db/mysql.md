@@ -12,7 +12,9 @@ IDENTIFIED BY 'Fryz12'
 GRANT CREATE, ALTER, SELECT
 ON egzamin.liga
 TO 'fryzjer'@'localhost'
+
 ;
+GRANT ALL PRIVILEGES ON PtakiPolskie.* TO 'filip'@'localhost';
 ```
 
 ### Wyczyszczenie tabeli z danych
@@ -21,19 +23,22 @@ TRUNCATE TABLE rozgrywka
 ;
 ```
 
+
+
 # ✅KLAUZULE
 
 ```SQL
-• LIKE = (nazwisko like '%a' or nazwisko like 'a%' );
+• LIKE --nazwisko like '%a' or nazwisko like 'a%';
 
-• ORDER BY : ASC(rosnąco), DESC(malejąco);
-
-• GROUP BY -- limit 10 ; na samym koncu;
+• ORDER BY
+- ASC (ascending) rosnąco.
+- DESC (descending) malejąco
 
 • HAVING --filtrowanie grup count(id_prac);
 
-• LIMIT -- limit 10 ; na samym koncu;
+• GROUP BY -- limit 10 ; na samym koncu;
 
+• LIMIT -- limit 10 ; na samym koncu;
 ```
 
 
@@ -70,7 +75,7 @@ TRUNCATE TABLE rozgrywka
 • TRIM() = usuwa puste znaki na poczatku i na koncu;
 ```
 
-## AGREGUJĄCE / MATEMATYCZNE
+##  AGREGUJĄCE
 ```SQL
 • ROUND(5.7876, 2) - zaokrogla liczby;
 
@@ -87,6 +92,10 @@ TRUNCATE TABLE rozgrywka
 
 ## DATY I CZASU
 ```SQL
+• timestampdiff(year, DataUrodzenia, Now());
+
+//access Dni: DateDiff('d';[DataWypozyczenia];Now())
+
 ---FUNKCJE NA REKORDACH
 • hour(), minute(), second();
 • day(), year(), month();
@@ -100,4 +109,86 @@ TRUNCATE TABLE rozgrywka
 LUB
 • current_time = CZAS
 • current_data = DATA
+```
+
+# ✅ INSTRUKCJE STERUJACE
+## IF:
+```SQL
+• IF(wiek>=18,'pelnoletni','niepelnoletni');
+
+```
+## SWITCH:
+```SQL
+--SKŁADNIA1
+CASE
+  WHEN cena=15 THEN 'ROWNA'
+  WHEN cena>15 THEN 'WYZSZA'
+  ELSE 'MNIEJSZA'
+END
+
+
+---SKŁADNIA2
+CASE imie
+  WHEN 'Janek' THEN 'Hej B.'
+  WHEN 'Adam' THEN 'Hej A.'
+  ELSE 'MNIEJSZA'
+END
+
+```
+
+## NULL
+```SQL
+
+--IFNULL
+
+Zwraca podaną wartość jeśli aktualna jest NULL
+• IFNULL(stanowisko,'BRAK')
+
+--NULLIF
+
+W podaną wartość zwraca NULL
+• NULLIF(imie,'JAN')
+
+```
+
+# ✅ OPERATORY
+```SQL
+---ARYTMETYCZNE
+• =  wiekszy badz rowny
+• <=  badz mnniejeszy lub równy
+• = równy
+• !=, <> różny od
+• %, MOD  reszta z dzielenia modulu
+
+---LOGICZNE
+• AND, &&
+cena>100 and cena < 200;
+
+• OR, ||
+cena > 100 or cena< 200;
+
+• BETWEEN
+cena between 100 and 200;
+
+• IN
+picie in('kawa','herbata');
+
+• NOT IN
+picie not in('kawa','herbata');
+
+• IS
+herbata is true; //lub flase;
+
+• LIKE = (nazwisko like '%a' or nazwisko like 'a%' );
+
+```
+
+## NAWIGACJA
+
+```TXT
+• show databases;
+• use nazwa_bazy;
+• conect nazwa_bazy;
+• show tables;
+• describe nazwa_tabeli;
 ```

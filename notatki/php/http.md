@@ -11,6 +11,10 @@ str_replace(',','.',$zmienna) //zmienia znak
 settype($zmienna, 'double') //ustawia typ zmiennej
 round($zmienna, 3) //zaakrogla zmienna
 
+rand(1, 49) //zwraca losowa liczbe z przedzialu dwoch liczb
+sort($nazwa_tablicy) //sortowanie rosnące
+rsort($nazwa_tablicy //sortowanie malejące
+
 date('Y-m-d') //zwraca dane w podanym formacie 
 
 // PLIKI COOKIES/CIASTECZKA

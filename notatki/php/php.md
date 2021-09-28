@@ -206,7 +206,26 @@ foreach($Lista as $produkt)
 }
 
 
+```
 
+
+### Przykład 2.
+```php
+
+$ocena = array('Wojciechowski'=>6, "Monasterski"=>5, "Achtelik"=>6);
+
+foreach($ocena as $klucz=>$wartosc){
+    echo "$klucz ma ocenę $wartosc <br>";
+}
+
+echo "<h1>Oceny z matematyki: </h1>";
+$ocena["Wojciechowski"] = "celujący";
+$ocena["Monasterski"] = "celujący";
+$ocena["Achtelik"] = "celujący";
+
+foreach($ocena as $key=>$e){
+    echo "$key ma ocene $e <br>";
+}
 
 
 ```

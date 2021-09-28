@@ -6,8 +6,7 @@
 
 ## ✅ [HTML/CSS](notatki/html/html-css.md)
 - [JavaScript](notatki/html/js.md)
-## ✅ BAZY DANYCH
-- [MySQL](notatki/db/mysql.md)
+## ✅ [MySQL](notatki/db/mysql.md)
 - [MS Acess](notatki/db/access.md)
 
 
