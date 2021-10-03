@@ -7,6 +7,9 @@ $_GET[] //widoczne w paskku adresu ?strona=kontakt
 isset() //sprawdza czy zmienna ma ustawiona wartosc
 empty() //sprawdza czy zmienna jest pusta
 
+array_key_exists($_POST['uzytkownik'],$hasla) 
+//sprawdza czy podany klucz istnijej w tablicy
+
 str_replace(',','.',$zmienna) //zmienia znak
 settype($zmienna, 'double') //ustawia typ zmiennej
 round($zmienna, 3) //zaakrogla zmienna
@@ -39,6 +42,37 @@ $_SERVER['SCRIPT_NAME'];
 ```
 
 # PRZYKAŁADY
+
+Logowanie 
+```php
+
+error_reporting (E_ALL ^ E_NOTICE);
+
+$hasla = array('admin'=>'pracownia1','admin2'=>'pracownia2');
+
+if(isset($_POST['uzytkownik']) && isset($_POST['haslo']))
+{
+    if
+    (
+        array_key_exists($_POST['uzytkownik'],$hasla) 
+        && 
+        ($hasla[$_POST['uzytkownik']]==$_POST['haslo'])
+    )
+    {
+        echo "zalogowano";
+    }
+
+
+    else
+    {
+        echo "Nie zalogowano";
+    }
+)
+
+
+````
+
+
 Formularz POST
 ```html
 
