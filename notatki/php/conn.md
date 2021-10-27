@@ -1,6 +1,89 @@
 
 # PHP&MYSQL -  POŁĄCZENIE Z BAZĄ
 
+
+## ✅ MYSQLI
+WYBRANE FUNKCJE MYSQLI :
+```php
+
+// PROCEDURALNIE
+$conn = mysqli_connect('localhost','root','');
+mysqli_select_db($conn,'dane');
+
+mysqli_error($conn);
+
+$res = mysqli_query($conn,$sql);
+
+mysqli_fetch_row($res)
+mysqli_fetch_assoc($res)
+mysqli_fetch_array($res)
+
+mysqli_num_rows($res);
+mysqli_num_fields($res);
+
+mysqli_close($conn);
+
+//OBIEKTOWO
+$conn = new mysqli('localhost','root','');
+$conn->select_db('dane');
+
+$conn->error;
+
+$res = $conn->query($sql);
+
+$res->fetch_row()
+$res->fetch_assoc()
+
+$res->num_rows;
+$res->num_fields;
+
+$conn->close();
+
+
+```
+
+
+PRZYKŁAD
+```php
+// polaczenie z baza danych
+$polaczenie = @mysqli_connect('localhost','root','')
+or die("nie polaczono z baza danych");
+
+// sprawdzanie polacznia bez or die
+if(!$polaczenie)
+{
+    exit("Nie polaczono z serwerem mysql");
+}
+
+// wybranie bazy danych
+mysqli_select_db($polaczenie, 'firma')
+or die("Nie polączono z bazą danych")
+;
+
+// wykonanie zapytania
+$sql = "SELECT * FROM TI";
+$zapytanie = mysqli_query($polaczenie,$sql)
+or die("Błąd w zapytaniu")
+;
+
+//wyswietlenie danych z bazy
+while($wynik = mysqli_fetch_array($zapytanie))
+{
+    $imie = $wynik['Imie'];
+    echo "<p>$imie</p>";
+}
+
+// wyswietlenie liczby zwroconych rekordow
+$liczba_rekordow = mysqli_num_rows($zapytanie);
+$liczba_kolumn = mysqli_num_fields($zapytanie);
+
+
+
+
+```
+
+
+
 ## ✅ Połączenie z bazą
 OBIEKTOWO
 ```php
@@ -193,6 +276,8 @@ Przyklad pliku polaczenie_proceduralne.php:
 ```php
 
 $conn = mysqli_connect("localhost",'root','','szkola');
+
+if(!$conn) exit("Błąd połączenia");
 
 $imie = "Adama";
 $nazwisko = "Mickiewicz";
