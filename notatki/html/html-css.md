@@ -1,6 +1,25 @@
-# HTML/CSS,  JavaScript
+# HTML/CSS
 
+## ✅ POJĘCIA
+```css
+padding: 10px;
+/*marginesy wewnętrzne 10px */
 
+margin: 10px;
+/* marginesy zewnętrzne 10 px */
+
+text-align: center
+/* wyrównanie tekstu */
+
+letter-spacing: 5px;
+/* odległość między literami*/
+
+text-transform:capitalize;
+/* tekst napisany kapitalikami (capitalize) */
+
+border-radius: 10px;
+/* zaokrąglenie rogów obramowania 10 px */
+```
 
 ## ✅ HTML
 ```html
@@ -10,8 +29,8 @@
 <header>
 <nav>
     <main>
-    <section> 
-    <article> 
+    <section>
+    <article>
     <aside>
 <footer>
 
@@ -42,7 +61,7 @@ font-size: 12px;
 border-radius: 20px;
 border: 2px solid black;
             -dotted /*kropkowana*/
-            
+
 
 padding: 10px;
 margin: 20px;

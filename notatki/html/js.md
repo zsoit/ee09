@@ -1,19 +1,11 @@
-## ✅ JavaScript
+# ✅ JavaScript
 
-### Zdarzenia/Ewenty
+### Zdarzenia/Eventy
 ```js
-onclick
+// myszka
+onclick //klikniecie
 onmouseover //najechanie myszką na obiekt
 onmouseout //odjechanie myszką od obiektu
-onkeyout
-onload
-````
-
-### Utworzenie elementu HTML
-```js
-var e = document.createElement('div');
-e.classList.add('item');
-document.body.appendChild(e);
 ```
 
 ### Funkcje wbudowane
@@ -30,6 +22,7 @@ parseFloat() //pobiera argument typu tekstowego i konwertuje go na liczbę zmien
 Number() //przekomwertuje argument na obiekt numeryczny;
 isNan() //sprawdza czy wartosc podana jako parametr nie jest liczbą;
 Math.sqrt(),Math.round(),Math.min(), Math.max(), Math.random()
+eval() //zamiana stringu na typ liczbowy
 
 Delta:
 // a=1,b=2,c=-3 - deleta dodatnia Δ=16, x₁=1, x₂=-3
@@ -38,16 +31,61 @@ Delta:
 ```
 ### JavaScript i HTML
 ```js
-// Funkcje tekstowe
+// FORMATOWANIE TEKSTU
 strike() //<s>Przekreslony tekst</s>
 italics() // <i>Tekst pochylony</i>
 fontcolor('lightblue') //kolor
+fontSize('12px') //rozmiar czcionki
+fontStyle('italic') //styl czcionki
+fontWeight('bold') //czcionka pogrubiona
+backgroundColor('red') //kolor tla
+
+//FUNKCJE TEKSTOWE
+length() //ile znakow ma tekst
 toUpperCase() //duze_litery
 toLowerCase() //male_litery
 
-//właściowści HTML
+//WŁAŚCIWOŚCI HTML
 .checked
 .value
 .innerHTML
 .src
+```
+
+# INNE
+
+## (na 99% nie bedzie)
+
+```js
+// operacje na DOM
+document.createElement(element)
+document.removeChild(element)
+document.appenddChild(element)
+document.replaceChild(element)
+
+//Zmiana elemntow DOM
+element.atribute = "nowa wartosc"
+element.SetAttribute(atrubut,wlasciowsc)
+element.style.properties = "nowa wartosc"
+
+
+//podwojne klikniecie
+oddbclick
+
+// klawiatura
+onkeyout
+onkeypress
+onkeydown
+
+// obiekty
+onload
+onscroll
+onresize
+````
+
+### Utworzenie elementu HTML
+```js
+var e = document.createElement('div');
+e.classList.add('item');
+document.body.appendChild(e);
 ```
