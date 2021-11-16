@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Usługi fryzjerskie</title>
+    <link rel="stylesheet" href="styl2.css">
+</head>
+
+<body>
+    <div id="lewy1">
+        <h2><a href="index.html">SALON FRYZJERSKI</a></h2>
+        <img src="obraz2.jpg" alt="Czesanie" height="290px">
+    </div>
+
+    <div id="prawy1">
+        <h2>MENU</h2>
+    </div>
+
+    <div id="prawy2">
+        <ol>
+            <li>
+                Strzeżenie
+                <ul>
+                    <li>krótkie</li>
+                    <li>Średnie</li>
+                    <li>półdługie</li>
+                    <li>długie</li>
+                </ul>
+            </li>
+            <li><a href=fryzura.html>Czesanie</a></li>
+
+            <li>Koloryzacja</li>
+        </ol>
+    </div>
+
+    <div id="lewy2">
+
+        <h3>Dziś promocja na strzyżenie włosów</h3>
+        <input type="radio" value="krótkie" id="krotkie" name="fryzura">krótkie <br>
+        <input type="radio" id="srednie" value="średnie" name="fryzura">Średnie<br>
+        <input type="radio" id="polsrednie" value="półśrednie" name="fryzura">Półśrednie<br>
+        <input type="radio" id="dlugie" value="długie" name="fryzura">długie<br>
+        <input type="submit" value="Odkryj promocje" onclick="pokaz_cene()"><br>
+        <p id="wynik"></p>
+    </div>
+
+    <script>
+        function pokaz_cene() {
+            var cena = 0;
+
+            var krotkie = document.getElementById('krotkie');
+            var srednie = document.getElementById('srednie');
+            var polsrednie = document.getElementById('polsrednie');
+            var dlugie = document.getElementById('dlugie');
+
+
+            if (krotkie.checked) cena = 25;
+            if (srednie.checked) cena = 30;
+            if (polsrednie.checked) cena = 40;
+            if (dlugie.checked) cena = 50;
+
+            var wynik = document.getElementById('wynik');
+            wynik.innerHTML = "Cena strżyzenia : " + cena + "zl";
+        }
+    </script>
+
+
+
+    <div id="prawy3">
+        <img src="obraz1.jpg" alt="Fryzjer">
+    </div>
+
+    <div id="stopka">
+        <p>Autor:JA</p>
+    </div>
+</body>
+
+</html>

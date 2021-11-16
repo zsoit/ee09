@@ -52,7 +52,7 @@ toLowerCase() //male_litery
 .src
 ```
 
-# INNE
+# ✅ INNE
 
 ## (na 99% nie bedzie)
 
