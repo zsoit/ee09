@@ -6,6 +6,9 @@
 
 ## ✅ [HTML/CSS](notatki/html/html-css.md)
 - [JavaScript](notatki/html/js.md)
+- [Obiekty JS](notatki/html/obiekty.md)
+- [Zdarzenia JS](notatki/html/zdarzenia.md)
+
 ## ✅ [MySQL](notatki/db/mysql.md)
 - [MS Acess](notatki/db/access.md)
 
