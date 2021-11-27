@@ -19,6 +19,19 @@ text-transform:capitalize;
 
 border-radius: 10px;
 /* zaokrąglenie rogów obramowania 10 px */
+
+list-style-type: square;
+/* lista punktowana kwadratem */
+
+font-style: normal, italic, oblique;
+/* styl prosty, kursywa, pochylony */
+
+border-collapse: collapse, inherit, separace;
+/* tworzenie połączonych obramowań
+inherit : Ustawia wprost wartość tej własności na wartość rodzica.
+separate : Używa modelu wyświetlania "rozdzielonych obramowań".
+collapse : Używa modelu wyświetlania "połączonych obramowań".
+*/
 ```
 
 ## ✅ HTML
@@ -61,6 +74,7 @@ font-size: 12px;
 border-radius: 20px;
 border: 2px solid black;
             -dotted /*kropkowana*/
+            -double
 
 
 padding: 10px;

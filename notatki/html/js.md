@@ -50,6 +50,7 @@ toLowerCase() //male_litery
 .value
 .innerHTML
 .src
+.style
 ```
 
 # ✅ INNE
