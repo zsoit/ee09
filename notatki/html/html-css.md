@@ -38,7 +38,12 @@ collapse : Używa modelu wyświetlania "połączonych obramowań".
 ```html
 <ol> //ordered list(lista numerowana)
 <ul> //unordered list(lista nienumerowana)
-
+<i> lub <em> //czcionka pochylona
+<b> lub <strong> //czcionka pogrubiona
+<sup> //indeks górny
+<sub> //indeks dolny
+    
+    
 <header>
 <nav>
     <main>
@@ -63,6 +68,16 @@ text-transform:
         lowercase;
         none;
 
+/* obramowanie tabeli i komórki jest połączone */
+border-collapse: 
+    collapse;
+    separate;
+    initial;
+    inherit;
+
+/* paski przesuwania (scroll) */
+overflow: scroll;
+        
 width: 200px;
 height: 1000px;
 
