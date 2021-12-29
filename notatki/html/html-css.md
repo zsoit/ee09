@@ -32,6 +32,17 @@ inherit : Ustawia wprost wartość tej własności na wartość rodzica.
 separate : Używa modelu wyświetlania "rozdzielonych obramowań".
 collapse : Używa modelu wyświetlania "połączonych obramowań".
 */
+
+/* obramowanie tabeli i komórki jest połączone */
+border-collapse: 
+    collapse;
+    separate;
+    initial;
+    inherit;
+
+/* paski przesuwania (scroll) */
+overflow: scroll;
+        
 ```
 
 ## ✅ HTML
